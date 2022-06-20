@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+		<link rel="stylesheet" type="text/css" href="CSS/index.css"/>
+		<script src="jquery-3.3.1.min.js"></script>
+		<script src="jquery.animate-shadow-min.js"></script>
+		<script>
+			$(window).bind("load", function() {
+				$("video").delay("250").fadeTo("500", "1");
+				$("svg").delay("225").fadeTo("500", "1");
+				$(".loader").fadeTo("200", "0").css( {"z-index": "-10", "animation": "none"} );
+			});
+		</script>
+		<title>Lilo Heinrich</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-23DGRQ6LSS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-23DGRQ6LSS', {'cookieFlags': 'SameSite=None; Secure'});
+    </script>
+	</head>
+	<body>
+		<svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1280" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+			<defs>
+				<mask id="mask" x="0" y="0" width="100%" height="100%" >
+					<rect id="back" x="0" y="0" width="100%" height="100%"/>
+					<g id="name" class="head">
+						<rect class="line" x="36%" y="45%" width="28%" height="0.5%"/>
+						<text class="" dominant-baseline="baseline" x="50%" y="43%">LILO</text>
+						<text class="" dominant-baseline="hanging" x="50%" y="47%">HEINRICH</text>
+					</g>
+					<g id="aboutMe" class="subHead">
+						<text class="" dominant-baseline="hanging" x="50%" y="57.5%">About</text>
+						<rect class="line" x="49%" y="60.5%" width="2%" height="0.1%"/>
+					</g>
+					<g id="myProjects" class="subHead">
+						<text class="" dominant-baseline="hanging" x="50%" y="62%">Projects</text>
+						<rect class="line" x="48%" y="65%" width="4%" height="0.1%"/>
+					</g>
+				</mask>
+			</defs>
+			<rect id="slideOff"  x="0" y="0" width="100%" height="100%"/>
+		</svg>
+		<div id="coverAboutMe"></div>
+		<div id="coverMyProjects"></div>
+		<div class="backButton" id="backProject">Back<div class="backButtonBorder" id="backBorderProject"></div></div>
+		<div class="backButton" id="backAbout">Back<div class="backButtonBorder" id="backBorderAbout"></div></div>
+		<div id="projectTextHolder">
+			<h1 id="projectTitle">Processing</h1>
+			<div id="projectTextBorder"></div>
+			<div id="projectText">
+				Proccesing is a java-based visual programming language that I chose as a topic for my junior year independent study. At about the same time I was learning the language, I was also beginning to draw, and decided that a project at the intersection of the two would be intresting. Here are three algorithims inspired by diffrent styles of art - each spawning hundreds of objects that act in different ways to create the final image.
+			</div>
+		</div>
+		<ul id="videoHolder">
+			<li id="points" class="current slide">
+				<div class="slotHolder">
+					<div class="videoNav projectUp"><div class="videoConnect connectUp"></div></div>
+					<div class="videoNav projectDown"><div class="videoConnect connectDown"></div></div>
+					<video class="backVideo" autoplay loop muted>
+						<source src="videos/starryNightDots.mp4" type="video/mp4">
+					</video>
+					<div class="videoCaption"> A re-creation of Pointillisim with Van Gogh's Starry Night.</div>
+				</div>
+			</li>
+			<li id="brush" class="down slide">
+				<div class="slotHolder">
+					<div class="videoNav projectUp"><div class="videoConnect connectUp"></div></div>
+					<div class="videoNav projectDown"><div class="videoConnect connectDown"></div></div>
+					<video class="backVideo" autoplay loop muted>
+						<source src="videos/waveStrokes.mp4" type="video/mp4">
+					</video>
+					<div class="videoCaption">Simulating painting with many individual brush strokes.</div>
+				</div>
+			</li>
+			<li id="sketch" class="up slide">
+				<div class="slotHolder">
+					<div class="videoNav projectUp"><div class="videoConnect connectUp"></div></div>
+					<div class="videoNav projectDown"><div class="videoConnect connectDown"></div></div>
+					<video class="backVideo" autoplay loop muted>
+						<source src="videos/monaSketch.mp4" type="video/mp4">
+					</video>
+					<div class="videoCaption">Mimicking crosshatching with Da Vinci's Mona Lisa.</div>
+				</div>
+			</li>
+		</ul>
+		<div id="aboutMeHolder">
+			<div id="aboutMeTextBorder"></div>
+			<div id="aboutMeText">
+				Hi, I'm Lilo. Thanks for checking out my site (not really my site, see eito-fis). I'm a senior in college who likes to .. and <a href="https://medium.com/familypizza">make pizza.</a><br><br>Hope you enjoy my porfolio!<br><br><a href="Resume_placeholder.pdf">Click here to download my resume.</a>
+			</div>
+			<img id="aboutMeImg" src="img/potrait.jpg"></img>
+		</div>
+		<div class="loader"></div>
+		<script src="js/responsive.js"></script>
+	</body>
+</html>
